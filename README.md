@@ -70,7 +70,7 @@ O-HAZE是第一个引入的包含模糊和无烟雾（地面真实）图像的�
 
 <hr/>
 
-![image-20220606173917583](C:/Users/pc/AppData/Roaming/Typora/typora-user-images/image-20220606173917583.png)
+![image-20220606173917583](https://cdn.jsdelivr.net/gh/xin-fight/note_image@main/img/202206070243742.png)
 
 
 
