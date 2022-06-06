@@ -1,0 +1,7 @@
+/home/dell/桌面/2022毕业设计
+
+conda activate torch160
+
+python3 ./train.py --arch Uformer --batch_size 32 --gpu '0' --train_ps 128 --train_dir /home/dell/桌面/2022毕业设计/Datasets/NH-HAZE/train_patches --env 32_0705_1 --val_dir /home/dell/桌面/2022毕业设计/Datasets/NH-HAZE/test_patches --embed_dim 32 --warmup
+
+python3 ./train.py --arch Uformer --resume --batch_size 32 --gpu '0' --train_ps 128 --train_dir /root/Datasets/NH-HAZE/train_patches --env 32_resume --val_dir /root/Datasets/NH-HAZE/test_patches --embed_dim 32 --warmup

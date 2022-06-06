@@ -1,0 +1,48 @@
+---
+# This configuration is for training with strong data augmentation,
+# which was mostly used in the paper.
+# This configuration was used for both CNNs and ViTs.
+dataset:
+  name: cifar100
+  root: "../data"
+  mean:
+  - 0.5071
+  - 0.4867
+  - 0.4408
+  std:
+  - 0.2675
+  - 0.2565
+  - 0.2761
+  padding: 4
+  color_jitter: 0.0
+  auto_augment: rand-m9-n2-mstd1.0
+  re_prob: 0.0
+train:
+  warmup_epochs: 5
+  epochs: 300
+  batch_size: 96
+  max_norm: 5
+  smoothing: 0.1
+  mixup:
+    num_classes: 100
+    mixup_alpha: 1.0
+    cutmix_alpha: 0.8
+    prob: 1.0
+val:
+  batch_size: 256
+  n_ff: 1
+model:
+  stem: false
+  block:
+    image_size: 32
+    patch_size: 2
+    sd: 0.1
+optim:
+  name: AdamW
+  lr: 1.25e-4
+  weight_decay: 0.05
+  scheduler:
+    name: CosineAnnealingLR
+    T_max: 300
+    eta_min: 0
+env: {}
