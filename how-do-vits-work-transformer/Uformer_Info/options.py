@@ -18,20 +18,22 @@ class Options():
 
         # global settings
         parser.add_argument('--batch_size', type=int, default=32, help='batch size')  # 设置BC
-        parser.add_argument('--nepoch', type=int, default=250, help='training epochs')
+        parser.add_argument('--nepoch', type=int, default=270, help='training epochs')
         parser.add_argument('--train_workers', type=int, default=12, help='train_dataloader workers')
+        # parser.add_argument('--train_workers', type=int, default=20, help='train_dataloader workers')
         parser.add_argument('--eval_workers', type=int, default=8, help='eval_dataloader workers')
         # parser.add_argument('--dataset', type=str, default='NH-HAZE')
         parser.add_argument('--dataset', type=str, default='Dense-HAZE')
         parser.add_argument('--pretrain_weights', type=str,
-                            default='/media/dell/fd6f6662-7e38-4427-80c6-0d4fb1f0e8b9/work_file/2022毕业设计/Uformer_ProbSparse/log/UformerMy_Infor_NoBias/models/model_latest_epoch.pth',
+                            default='/media/dell/fd6f6662-7e38-4427-80c6-0d4fb1f0e8b9/work_file/2022毕业设计/Uformer_ProbSparse/My_best_model/NH/S_Best_PSNR: 21.1591 | the_SIMM: 0.7765.pth',
+                            # default='/media/dell/fd6f6662-7e38-4427-80c6-0d4fb1f0e8b9/work_file/2022毕业设计/Uformer_ProbSparse/log/UformerMy_Infor_NoBias/models/model_latest_epoch.pth',
                             # default='/media/dell/fd6f6662-7e38-4427-80c6-0d4fb1f0e8b9/work_file/2022毕业设计/Uformer_ProbSparse/My_best_model/Ou/U_P_ Best_PSNR: 23.3993 | the_SIMM: 0.8114.pth',
                             # default='/media/dell/fd6f6662-7e38-4427-80c6-0d4fb1f0e8b9/work_file/2022毕业设计/Uformer_ProbSparse/log/UformerMy_Infor_Ou/models/model_latest_epoch.pth',
                             help='path of pretrained_weights')
         parser.add_argument('--optimizer', type=str, default='adamw', help='optimizer for training')
         parser.add_argument('--lr_initial', type=float, default=0.0002, help='initial learning rate')
         parser.add_argument('--weight_decay', type=float, default=0.02, help='weight decay')
-        parser.add_argument('--gpu', type=str, default='0,1', help='GPUs')  # 使用的gpu
+        parser.add_argument('--gpu', type=str, default='1', help='GPUs')  # 使用的gpu
         parser.add_argument('--arch', type=str, default='Uformer', help='archtechture')  # 可选的结构
         parser.add_argument('--mode', type=str, default='denoising', help='image restoration mode')
 
@@ -63,11 +65,11 @@ class Options():
         # args for training
         parser.add_argument('--train_ps', type=int, default=128, help='patch size of training sample')  # 训练样本的补丁大小
         parser.add_argument('--resume', action='store_true', default=True)
-        parser.add_argument('--train_dir', type=str, default='../datasets/SIDD/train', help='dir of train data')  # 训练数据
-        parser.add_argument('--val_dir', type=str, default='../datasets/SIDD/val',
+        parser.add_argument('--train_dir', type=str, default='/media/dell/fd6f6662-7e38-4427-80c6-0d4fb1f0e8b9/work_file/2022毕业设计/Datasets/NH-HAZE/train_patches', help='dir of train data')  # 训练数据
+        parser.add_argument('--val_dir', type=str, default='/media/dell/fd6f6662-7e38-4427-80c6-0d4fb1f0e8b9/work_file/2022毕业设计/Datasets/NH-HAZE/test_patches',
                             help='dir of train data')  # dir of train data
         # action='store_true'，只要运行时该变量有传参就将该变量设为True。
-        parser.add_argument('--warmup', action='store_true', default=False, help='warmup')  # warmup是一种学习率优化方法
+        parser.add_argument('--warmup', action='store_true', default=True, help='warmup')  # warmup是一种学习率优化方法
         parser.add_argument('--warmup_epochs', type=int, default=3, help='epochs for warmup')
 
         return parser

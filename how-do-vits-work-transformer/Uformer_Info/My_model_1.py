@@ -11,7 +11,7 @@ from timm.models.layers import DropPath, to_2tuple, trunc_normal_
 import torch.nn.functional as F
 from einops import rearrange, repeat
 from einops.layers.torch import Rearrange
-from ProbSparse.attn import AttentionLayer
+from Uformer_Info.ProbSparse.attn import AttentionLayer
 import math
 import numpy as np
 import time

@@ -82,7 +82,7 @@ def get_arch(opt):
     # from My_model import UNet, Uformer
     arch = opt.arch
 
-    print('You choose ' + arch + '...')
+    print('You choose ' + arch + '...\n')
     if arch == 'UNet':
         model_restoration = UNet(dim=opt.embed_dim)
 
