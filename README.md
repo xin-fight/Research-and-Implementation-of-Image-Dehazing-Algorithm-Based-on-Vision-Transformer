@@ -214,7 +214,7 @@ python3 ./test_long_GPU.py
 
 <img src="https://cdn.jsdelivr.net/gh/xin-fight/note_image@main/img/202206061736084.png" alt="image-20220606173637944" style="zoom:67%;" />
 
-<img src="C:/Users/pc/AppData/Roaming/Typora/typora-user-images/image-20220606173646976.png" alt="image-20220606173646976" style="zoom: 80%;" />
+<img src="https://cdn.jsdelivr.net/gh/xin-fight/note_image@main/img/202206222346976.png" alt="image-20220606173646976" style="zoom: 80%;" />
 
 <img src="https://cdn.jsdelivr.net/gh/xin-fight/note_image@main/img/202206061737789.png" alt="image-20220606173705551" style="zoom: 80%;" />
 
